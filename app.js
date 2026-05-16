@@ -105,7 +105,7 @@ function renderMedia(media, opcionId) {
           // Solo empieza a cargar cuando el usuario llega a ese slide
           return `
           <div class="car-slide">
-            <video id="vid${opcionId}" muted playsinline preload="none">
+            <video id="vid${opcionId}" muted playsinline autoplay preload="none">
               <source src="${asset(s.asset)}" type="video/mp4">
             </video>
           </div>`;
