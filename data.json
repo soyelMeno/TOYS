@@ -1,0 +1,152 @@
+{
+  "empresa": {
+    "nombre": "AC Letreros",
+    "tagline": "Haz brillar tu idea",
+    "whatsapp": "529931234567",
+    "redes": {
+      "instagram": "https://www.instagram.com/ac_letreros/",
+      "facebook": "https://www.facebook.com/BrightUpL/"
+    }
+  },
+  "cliente": {
+    "nombre": "TOYZ",
+    "descripcion": "Serie de propuestas diseñadas para TOYZ, con distintos niveles de impacto visual, tecnología y acabado. Cada opción tiene su propia personalidad."
+  },
+  "intro": {
+    "titulo": "Tres piezas. Una misma identidad.",
+    "parrafos": [
+      "La propuesta contempla el <strong>letrero principal con el logotipo</strong>, el <strong>isotipo independiente</strong> y el <strong>personaje en tamaño real</strong>. Cada pieza puede funcionar sola o como parte de un conjunto que define el espacio desde que entras.",
+      "Las opciones del letrero principal van desde una versión sólida y contundente hasta efectos LED programables que cambian la atmósfera completa de la cochera."
+    ]
+  },
+  "secciones": [
+    {
+      "id": "logo-principal",
+      "tag": "Letrero / Logo principal",
+      "titulo": "Tres propuestas para el logo",
+      "descripcion": "Mismo logotipo, distintos niveles de impacto. Desde la potencia clásica hasta el efecto que detiene a la gente en seco.",
+      "opciones": [
+        {
+          "id": "opcion-a",
+          "etiqueta": "Opción A",
+          "nombre": "Clásica pero potente",
+          "descripcion": "Caja de luz con letras en relieve. Sin complicaciones. El estándar que nunca falla y siempre impone.",
+          "caracteristicas": [
+            "Caja de luz con letras en relieve de acrílico negro 2mm",
+            "Módulos LED en tonos blanco, azul, amarillo, verde y rojo",
+            "Construcción robusta, interior y exterior"
+          ],
+          "precio": 9400,
+          "media": {
+            "tipo": "imagen",
+            "asset": "img_opcionA"
+          },
+          "destacada": false,
+          "badge": null
+        },
+        {
+          "id": "opcion-b",
+          "etiqueta": "Opción B",
+          "nombre": "TOYZ Full Colors",
+          "descripcion": "LED COB pixel con controlador de 14 escenas. Barrido de colores, transiciones programadas — una configuración hecha para TOYZ.",
+          "caracteristicas": [
+            "Frente y cantos en acrílico blanco 3mm",
+            "Letras en relieve acrílico negro 2mm",
+            "Tiras LED COB pixel de alta intensidad",
+            "<strong>14 escenas actualizables</strong> vía control",
+            "Configuración de colores personalizada"
+          ],
+          "precio": 14500,
+          "media": {
+            "tipo": "carrusel",
+            "slides": [
+              { "tipo": "imagen", "asset": "img_opcionB" },
+              { "tipo": "video",  "asset": "vid_fullcolors" }
+            ]
+          },
+          "destacada": true,
+          "badge": "⭐ Recomendada"
+        },
+        {
+          "id": "opcion-c",
+          "etiqueta": "Opción C",
+          "nombre": "TOYZ Bling Bling ✦",
+          "descripcion": "Acrílico perforado con LEDs por dentro. Cada punto destella diferente según el ángulo. Más que un letrero — es una pieza.",
+          "caracteristicas": [
+            "Letras 3D con efecto de iluminación centellante",
+            "Frente en acrílico transparente + patrón vinil negro",
+            "Cantos en acrílico blanco",
+            "LEDs de alta intensidad — efecto estrella real"
+          ],
+          "precio": 10500,
+          "media": {
+            "tipo": "video-loop",
+            "asset": "vid_bling"
+          },
+          "destacada": false,
+          "badge": null
+        }
+      ]
+    },
+    {
+      "id": "isotipo",
+      "tag": "Letrero Isotipo",
+      "titulo": "El elefante, en su propio espacio",
+      "descripcion": "Diseñado para coexistir con el logotipo sin opacar ni ser opacado. Dos piezas, una sola identidad.",
+      "opciones": [
+        {
+          "id": "isotipo-a",
+          "etiqueta": "Opción única",
+          "nombre": "Isotipo · Caja de Luz",
+          "descripcion": "Iluminación LED de intensidad media para mantener la armonía visual con el letrero principal. La intensidad no es una limitación — es una decisión de diseño para que ambas piezas convivan sin competir.",
+          "caracteristicas": [
+            "Caja de luz con forma del isotipo",
+            "Iluminación LED intensidad media, balanceada",
+            "Materiales premium, acabado de línea",
+            "Funciona solo o en conjunto con el letrero principal"
+          ],
+          "precio": 8900,
+          "media": {
+            "tipo": "imagen",
+            "asset": "img_isotipo",
+            "layout": "duo"
+          },
+          "destacada": false,
+          "badge": null
+        }
+      ]
+    },
+    {
+      "id": "personaje",
+      "tag": "Letrero Personaje Tamaño Real",
+      "titulo": "1.8 metros de puro carácter",
+      "descripcion": "El personaje de TOYZ recortado en acrílico, a escala real. El que lo ve, no lo olvida.",
+      "opciones": [
+        {
+          "id": "personaje-a",
+          "etiqueta": "Pieza única",
+          "nombre": "Personaje · Tamaño Real",
+          "descripcion": "Fabricado en acrílico blanco con corte CNC de precisión. Listo para instalarse en interior — showroom, entrada, área de exhibición. Una presencia que define el espacio.",
+          "caracteristicas": [
+            "Acrílico blanco de alta calidad",
+            "1.8m de altura × 1m de ancho",
+            "Corte CNC de precisión sobre diseño vectorial",
+            "Ideal para interior — showroom, cochera, tienda"
+          ],
+          "precio": 11100,
+          "media": {
+            "tipo": "imagen",
+            "asset": "img_personaje",
+            "layout": "duo-reverse"
+          },
+          "destacada": false,
+          "badge": null
+        }
+      ]
+    }
+  ],
+  "cotizacion": {
+    "nota": "Precios por pieza, incluyen fabricación y acabados. Tiempo de producción estimado: <strong>10–15 días hábiles</strong>. Precios en <strong>MXN</strong>, vigentes por 30 días.",
+    "moneda": "MXN"
+  }
+}

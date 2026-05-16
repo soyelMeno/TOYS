@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TOYZ — Serie de propuestas de letreros LED por AC Letreros">
+  <title>TOYZ — Propuestas LED · AC Letreros</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Precarga de fuente crítica -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!--
+    ┌─────────────────────────────────────────────────────┐
+    │  Arquitectura MVC                                   │
+    │                                                     │
+    │  Model      → data.json   (contenido y precios)    │
+    │               assets.js   (imágenes y videos)      │
+    │  View       → app.js      (funciones render*())    │
+    │  Controller → app.js      (init, eventos, estado)  │
+    │  Estilos    → styles.css                           │
+    └─────────────────────────────────────────────────────┘
+
+    Para modificar contenido / precios → edita data.json
+    Para cambiar imágenes o videos     → edita assets.js
+    Para ajustar estilos               → edita styles.css
+    Para agregar lógica                → edita app.js
+  -->
+
+  <!-- Punto de montaje de la app -->
+  <div id="app"></div>
+
+  <!-- Módulo principal (carga data.json y assets.js internamente) -->
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>
