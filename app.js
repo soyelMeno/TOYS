@@ -105,7 +105,7 @@ function renderMedia(media, opcionId) {
           // Solo empieza a cargar cuando el usuario llega a ese slide
           return `
           <div class="car-slide">
-            <video id="vid${opcionId}" muted playsinline autoplay preload="none">
+            <video id="vid${opcionId}" muted playsinline autoplay preload="metadata">
               <source src="${asset(s.asset)}" type="video/mp4">
             </video>
           </div>`;
@@ -329,19 +329,31 @@ function initCarrusel(carouselEl) {
       .forEach((d, i) => d.classList.toggle('on', i === idx));
 
     if (idx === videoIdx) {
-      // Slide del video: iniciar precarga y reproducir
-      vid.preload = 'auto';
-      vid.currentTime = 0;
-      vid.play().catch(() => {});
-    } else {
-      // Slide de imagen: pausar video, programar avance al video
-      vid.pause();
-      // Aprovechar para precargar el video en segundo plano
-      if (vid.preload === 'none') vid.preload = 'metadata';
-      state.carruseles[id].timer = setTimeout(
-        () => setSlide(videoIdx), 4000
-      );
-    }
+  // Asegurar carga del video antes de reproducir
+  vid.load();
+  vid.currentTime = 0;
+
+  const playPromise = vid.play();
+
+  if (playPromise !== undefined) {
+    playPromise.catch(err => {
+      console.log('Autoplay bloqueado:', err);
+    });
+  }
+
+} else {
+  // Regresar a imagen
+  vid.pause();
+
+  // Precargar metadata desde el inicio
+  if (vid.preload === 'none') {
+    vid.preload = 'metadata';
+  }
+
+  state.carruseles[id].timer = setTimeout(() => {
+    setSlide(videoIdx);
+  }, 4000);
+}
   }
 
   // Al terminar el video → volver a la imagen
