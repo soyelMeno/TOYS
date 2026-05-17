@@ -253,12 +253,56 @@ a      { text-decoration: none; color: inherit; }
 }
 
 /* ── CARRUSEL ── */
-.carousel { position: relative; width: 100%; aspect-ratio: 16/10; overflow: hidden; background: #0d0d0d; flex-shrink: 0; }
-.car-track { display: flex; height: 100%; transition: transform .7s cubic-bezier(.77,0,.175,1); }
-.car-track.instant { transition: none; }
-.car-slide { min-width: 100%; height: 100%; position: relative; flex-shrink: 0; }
-.car-slide video,
-.car-slide img { width: 100%; height: 100%; object-fit: cover; }
+/* ── CARRUSEL FIX MOBILE ── */
+
+.carousel{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/10;
+  overflow:hidden;
+  background:#0d0d0d;
+}
+
+.car-track{
+  display:flex;
+  width:100%;
+  height:100%;
+  transition:transform .7s cubic-bezier(.77,0,.175,1);
+}
+
+.car-track.instant{
+  transition:none;
+}
+
+.car-slide{
+  flex:0 0 100%;
+  width:100%;
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+
+.car-slide img,
+.car-slide video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* MOBILE */
+@media (max-width:640px){
+
+  .carousel{
+    aspect-ratio:4/5;
+  }
+
+  .car-slide img,
+  .car-slide video{
+    object-fit:contain;
+    background:#0d0d0d;
+  }
+}
 .car-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 5; }
 .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.3); transition: background .3s, transform .3s; cursor: pointer; }
 .dot.on { background: var(--accent); transform: scale(1.35); }
